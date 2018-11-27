@@ -44,7 +44,7 @@ public class SpamMessagesEfficiently {
         int min=n;
         for (int i=1; i<n; i++){
             if (arr[i]!=0){
-                int a =arr[i]+2+(int)Math.ceil((double)(1.0*(n-i)/(i)));
+                int a =arr[i]+3+(int)Math.ceil((double)(1.0*(n-i)/(i)));
                 if (min>a){
                     instructions[n]=instructions[i]+"AC";
                     for(int j=0; j<a-arr[i]-2; j++){
@@ -59,7 +59,7 @@ public class SpamMessagesEfficiently {
             else{
                 int b = spam(i,arr,instructions);
                 arr[n]=b;
-                int a = b+2+(int)Math.ceil((double)(1.0*(n-i)/(i)));
+                int a = b+3+(int)Math.ceil((double)(1.0*(n-i)/(i)));
                 if (min>a){
                     instructions[n]=instructions[i]+"AC";
                     for(int j=0; j<a-b-2; j++){
